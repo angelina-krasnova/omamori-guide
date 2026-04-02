@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omamori Guide | Гид по японской мифологии, ёкаям и ками</title>
+    <meta name="description" content="Погрузитесь в мир японской мифологии: ёкаи, ками, древние легенды и сказания. Гид с каталогом существ">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=108368699', 'ym');
+
+    ym(108368699, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/108368699" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<body>
+    <div id="header-placeholder"></div>
+
+    <!-- Hero секция с волнами -->
+    <section class="hero">
+        <div class="wave-decoration">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25"></path>
+                <path d="M0,0V15.81C13,21.25,27.93,25.67,44.24,28.45c69.76,11.7,137.14,7.28,206.38-7.06,58.28-12.05,114.89-31.19,173.73-41.36,66.27-11.46,132.88-7.46,199.51,6.46C714.5,9.89,775.69,29.9,837.23,39.49c62.15,9.64,124.61,7.44,186.72-4.67,33.28-6.49,66.07-16.16,98.74-26.43C1152.86,0,1176.37,0,1200,0Z" opacity=".5"></path>
+                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"></path>
+            </svg>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">Гид по японской мифологии</h1>
+            <p class="hero-subtitle">Погрузитесь в мир ёкаев, ками и древних легенд Страны восходящего солнца</p>
+            <a href="catalog.html" class="btn btn-primary">Исследовать существ</a>
+        </div>
+    </section>
+
+    <!-- Введение в японскую мифологию -->
+    <section class="intro-section">
+        <div class="container">
+            <div class="paper-texture">
+                <h2 class="section-title">Душа Японии: между миром людей и духов</h2>
+                <div class="intro-grid">
+                    <div class="intro-text">
+                        <p>Японская мифология — это удивительный сплав древних синтоистских верований, буддийских притч и народных сказаний. В ней нет четкой грани между реальным и сверхъестественным: ками (духи) обитают в камнях, деревьях и водопадах, а ёкаи могут незаметно жить рядом с человеком.</p>
+                        <p>Восемь миллионов богов — так говорят японцы, подчеркивая, что божественное присутствует во всем. На протяжении веков эти истории формировали японское искусство, театр, литературу и даже современную поп-культуру.</p>
+                        <!-- <p>Наш гид познакомит вас с самыми известными существами и легендами, а с помощью технологии дополненной реальности вы сможете увидеть их в своем пространстве.</p> -->
+                    </div>
+                    <div class="intro-image">                            
+                        <img src="images/torii-gate.jpg" alt="Врата тории в Японии" class="intro-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Быстрый обзор существ (будет заполняться через JS) -->
+    <section class="preview-section">
+        <div class="container">
+            <h2 class="section-title">Знакомьтесь: легендарные существа</h2>
+            <div class="creatures-preview-grid" id="preview-grid">
+                <!-- Карточки загружаются через main.js -->
+            </div>
+            <div class="text-center">
+                <a href="catalog.html" class="btn btn-secondary">Смотреть всех →</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="quote-section">
+        <div class="container">
+            <div class="quote-block">
+                <p class="quote-text">«Япония — это страна, где реальность встречается с мифом, а древние духи до сих пор шепчут в ветвях сакуры»</p>
+            </div>
+        </div>
+    </section>
+    
+    <div id="footer-placeholder"></div>
+
+    <script src="js/header.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
