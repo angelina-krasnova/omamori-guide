@@ -194,10 +194,11 @@ function displayCreature(creatures, creatureId) {
                 <img src="images/creatures/${creature.image}" alt="${creature.name}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 24px;">
             </div>
             
-            <a href="#" class="btn btn-ar" onclick="openImageViewer('${creature.id}'); return false;">
-                <span class="ar-icon">◈</span> Увеличить изображение
+            <a href="#" class="btn btn-ar" onclick="openAR('${creature.id}'); return false;">
+                <span class="ar-icon">◈</span> Посмотреть в AR
             </a>
-            <p class="ar-note">* Нажмите для просмотра в полном размере</p>
+            <p class="ar-note">* Дополненная реальность</p>
+            </a>
         </div>
         
         <div class="profile-info">
@@ -230,8 +231,8 @@ function displayCreature(creatures, creatureId) {
     `;
 }
 
-// Функция для просмотра изображения в полном размере
-window.openImageViewer = function(creatureId) {
+// Функция для просмотра изображения в полном размере которую я заменю на функцию для просмотра в допреальности
+window.openAR = function(creatureId) {
     // Сначала получаем данные о существе, чтобы узнать имя файла
     fetch('data/creatures.json')
         .then(response => response.json())

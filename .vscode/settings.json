@@ -1,0 +1,10 @@
+{
+    "liveServer.settings.https": {
+        "enable": true,
+        "key": "C:/Users/DELL/ssl/192.168.0.108-key.pem",
+        "cert": "C:/Users/DELL/ssl/192.168.0.108.pem",
+        "passphrase": ""
+    },
+    "liveServer.settings.port": 5500,
+    "liveServer.settings.root": "./"
+}

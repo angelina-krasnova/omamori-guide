@@ -5,8 +5,8 @@ function generateFooter() {
     return `
     <footer>
         <div class="container">
-            <p>© ${currentYear} Гид по японской мифологии</p>
-            <p class="footer-note">Производственная практика | Разработчик: Краснова Ангелина</p>
+            <p>© ${currentYear} Интерактивный гид по японской мифологии</p>
+            <p class="footer-note">Дипломная работа | Разработчик: Краснова Ангелина</p>
         </div>
     </footer>
     `;
