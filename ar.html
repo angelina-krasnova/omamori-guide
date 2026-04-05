@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>AR | Omamori Guide</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    
+    <script src="https://ar-libs.blippar.com/aframe/1.3.0/aframe-v1.3.0.min.js"></script>
+    <script src="webar-sdk/webar-sdk-2.1.0.min.js"
+        webar-mode="surface-tracking"
+        auto-init="false"
+        ios-camera-permission="true"></script>
+</head>
+<body style="margin: 0; overflow: hidden;">
+    <!-- Кнопка назад -->
+    <div style="position: fixed; top: 20px; left: 20px; z-index: 1000;">
+        <a href="javascript:history.back()" style="background: rgba(0,0,0,0.6); color: white; padding: 10px 15px; border-radius: 30px; text-decoration: none; font-family: sans-serif;">← Назад</a>
+    </div>
+    
+    <a-scene
+        webar-scene="key: ec3501ee-7bb8-4cd3-a7bd-79baa3cc09f1"
+        vr-mode-ui="enabled: false"
+        device-orientation-permission-ui="enabled: false"
+        loading-screen="enabled: false">
+
+        <a-camera webar-camera></a-camera>
+
+        <a-assets>
+            <a-asset-item id="model"></a-asset-item>
+        </a-assets>
+
+        <a-light type="ambient" color="#ffffff"></a-light>
+
+        <a-entity webar-stage>
+            <a-entity webar-ux-control="stageCursorUX: true; userGestureRotation: true; userGestureScale: true;">
+                <a-entity gltf-model="#model" 
+                    id="arModel"
+                    rotation="0 0 0" 
+                    position="0 0 0" 
+                    scale="0.5 0.5 0.5"
+                    webar-loadmonitor="elType: glb">
+                </a-entity>
+            </a-entity>
+        </a-entity>
+    </a-scene>
+
+    <script>
+        // Получаем ID существа из URL
+        const creatureId = new URLSearchParams(window.location.search).get('id');
+        
+        if (creatureId) {
+            fetch('data/creatures.json')
+                .then(response => response.json())
+                .then(data => {
+                    const creature = data.creatures.find(c => c.id === creatureId);
+                    if (creature) {
+                        document.getElementById('model').setAttribute('src', `aframe/models/${creature.id}.glb`);
+                        document.title = `${creature.name} в AR | Omamori Guide`;
+                    }
+                })
+                .catch(error => console.error('Ошибка:', error));
+        }
+        
+        // Запускаем AR
+        WEBARSDK.Init();
+    </script>
+</body>
+</html>

@@ -231,54 +231,63 @@ function displayCreature(creatures, creatureId) {
     `;
 }
 
-// Функция для просмотра изображения в полном размере которую я заменю на функцию для просмотра в допреальности
+// Функция для просмотра существа в допреальности
 window.openAR = function(creatureId) {
-    // Сначала получаем данные о существе, чтобы узнать имя файла
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    if (isMobile) {
+        // На телефоне: открываем AR-страницу
+        window.location.href = `ar.html?id=${creatureId}`;
+    } else {
+        // На компьютере: показываем QR-код
+        showQRCodeForDesktop(creatureId);
+    }
+};
+
+// Показ QR-кода на компьютере
+function showQRCodeForDesktop(creatureId) {
     fetch('data/creatures.json')
         .then(response => response.json())
         .then(data => {
             const creature = data.creatures.find(c => c.id === creatureId);
-            if (creature) {
-                const imageUrl = `images/creatures/${creature.image}`;
-                
-                // Создаем модальное окно для просмотра изображения
-                const modal = document.createElement('div');
-                modal.style.cssText = `
-                    position: fixed;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    background-color: rgba(0, 0, 0, 0.9);
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    z-index: 1000;
-                    cursor: pointer;
-                `;
-                
-                const img = document.createElement('img');
-                img.src = imageUrl;
-                img.alt = creature.name;
-                img.style.cssText = `
-                    max-width: 90%;
-                    max-height: 90%;
-                    object-fit: contain;
-                    border-radius: 8px;
-                `;
-                
-                modal.appendChild(img);
-                
-                // Закрытие по клику
-                modal.addEventListener('click', function() {
-                    document.body.removeChild(modal);
-                });
-                
-                document.body.appendChild(modal);
-            }
+            if (!creature) return;
+            
+            const arUrl = `${window.location.origin}/ar.html?id=${creatureId}`;
+            
+            const modal = document.createElement('div');
+            modal.className = 'qr-modal';
+            modal.innerHTML = `
+                <div class="paper-texture" style="max-width: 400px; margin: 0; text-align: center;">
+                    <p>Отсканируйте QR-код, чтобы увидеть <strong>${creature.name}</strong> в AR</p>
+                    <div id="qrCodeContainer" style="display: flex; justify-content: center; margin: 20px 0;"></div>
+                    <p style="color: var(--text-muted); font-size: 12px;">Android: Chrome | iOS: Safari</p>
+                    <button class="btn btn-primary" onclick="this.closest('.qr-modal').remove()">Закрыть</button>
+                </div>
+            `;
+            
+            document.body.appendChild(modal);
+            
+            setTimeout(() => {
+                const qrContainer = document.getElementById('qrCodeContainer');
+                if (qrContainer && typeof QRCode !== 'undefined') {
+                    qrContainer.innerHTML = '';
+                    new QRCode(qrContainer, {
+                        text: arUrl,
+                        width: 220,
+                        height: 220,
+                        colorDark: "#B22222",
+                        colorLight: "transparent",
+                        correctLevel: QRCode.CorrectLevel.H
+                    });
+                }
+            }, 100);
+            
+            modal.onclick = (e) => { if (e.target === modal) modal.remove(); };
         })
-        .catch(error => {
-            console.error('Ошибка загрузки изображения:', error);
-            alert('Не удалось загрузить изображение');
-        });
+        .catch(error => console.error('Ошибка:', error));
+}
+
+// Функция закрытия 
+window.closeARModal = function() {
+    const modal = document.querySelector('div[style*="z-index: 10000"]');
+    if (modal) modal.remove();
 };
