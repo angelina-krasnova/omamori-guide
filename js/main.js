@@ -251,7 +251,7 @@ function showQRCodeForDesktop(creatureId) {
             const creature = data.creatures.find(c => c.id === creatureId);
             if (!creature) return;
             
-            const arUrl = `${window.location.origin}/ar.html?id=${creatureId}`;
+            const arUrl = `${window.location.origin}/omamori-guide/ar.html?id=${creatureId}`;
             
             const modal = document.createElement('div');
             modal.className = 'qr-modal';
