@@ -54,8 +54,14 @@
                 .then(data => {
                     const creature = data.creatures.find(c => c.id === creatureId);
                     if (creature) {
+                        // Устанавливаем модель
                         document.getElementById('model').setAttribute('src', `aframe/models/${creature.id}.glb`);
                         document.title = `${creature.name} в AR | Omamori Guide`;
+                        
+                        // МЕНЯЕМ SCALE В ЗАВИСИМОСТИ ОТ JSON
+                        const scaleValue = creature.scale !== undefined ? creature.scale : 20;
+                        const arModel = document.getElementById('arModel');
+                        arModel.setAttribute('scale', `${scaleValue} ${scaleValue} ${scaleValue}`);
                     }
                 })
                 .catch(error => console.error('Ошибка:', error));
