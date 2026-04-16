@@ -87,10 +87,10 @@ function displayPreviewCards(creatures) {
         card.dataset.creature = creature.id;
         
         card.innerHTML = `
-            <div class="preview-card-image" style="background: linear-gradient(135deg, #B22222, #8B0000);">${creature.nameJa}</div>
+            <div class="preview-card-image">${creature.nameJa}</div>
             <h3>${creature.name}</h3>
             <p>${creature.shortDesc}</p>
-            <a href="creature.html?id=${creature.id}" class="btn btn-secondary" style="margin-top: 15px;">Подробнее</a>
+            <a href="creature.html?id=${creature.id}" class="btn btn-secondary" >Подробнее</a>
         `;
         
         previewGrid.appendChild(card);
@@ -111,11 +111,11 @@ function displayCatalog(creatures) {
         card.dataset.type = creature.type;
         
         card.innerHTML = `
-            <div class="preview-card-image" style="background: linear-gradient(135deg, #B22222, #8B0000);">${creature.nameJa}</div>
+            <div class="preview-card-image">${creature.nameJa}</div>
             <h3>${creature.name}</h3>
             <p class="creature-name-ja">${creature.nameJa}</p>
             <p>${creature.shortDesc}</p>
-            <a href="creature.html?id=${creature.id}" class="btn btn-secondary" style="margin-top: 15px;">Подробнее</a>
+            <a href="creature.html?id=${creature.id}" class="btn btn-secondary">Подробнее</a>
         `;
         
         catalogGrid.appendChild(card);
@@ -191,7 +191,7 @@ function displayCreature(creatures, creatureId) {
     creatureContent.innerHTML = `
         <div class="profile-image">
             <div class="creature-image-large">
-                <img src="images/creatures/${creature.image}" alt="${creature.name}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 24px;">
+                <img src="images/creatures/${creature.image}" alt="${creature.name}">
             </div>
             
             <a href="#" class="btn btn-ar" onclick="openAR('${creature.id}'); return false;">
@@ -256,9 +256,9 @@ function showQRCodeForDesktop(creatureId) {
             const modal = document.createElement('div');
             modal.className = 'qr-modal';
             modal.innerHTML = `
-                <div class="paper-texture" style="max-width: 400px; margin: 0; text-align: center;">
+                <div class="paper-texture">
                     <p>Отсканируйте QR-код, чтобы увидеть <strong>${creature.name}</strong> в AR</p>
-                    <div id="qrCodeContainer" style="display: flex; justify-content: center; margin: 20px 0;"></div>
+                    <div id="qrCodeContainer"></div>
                     <p style="color: var(--text-muted); font-size: 12px;">Android: Chrome | iOS: Safari</p>
                     <button class="btn btn-primary" onclick="this.closest('.qr-modal').remove()">Закрыть</button>
                 </div>
