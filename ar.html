@@ -45,30 +45,28 @@
     </a-scene>
 
     <script>
-        // Получаем ID существа из URL
-        const creatureId = new URLSearchParams(window.location.search).get('id');
-        
-        if (creatureId) {
-            fetch('data/creatures.json')
-                .then(response => response.json())
-                .then(data => {
-                    const creature = data.creatures.find(c => c.id === creatureId);
-                    if (creature) {
-                        // Устанавливаем модель
-                        document.getElementById('model').setAttribute('src', `aframe/models/${creature.id}.glb`);
-                        document.title = `${creature.name} в AR | Omamori Guide`;
-                        
-                        // МЕНЯЕМ SCALE В ЗАВИСИМОСТИ ОТ JSON
-                        const scaleValue = creature.scale !== undefined ? creature.scale : 20;
-                        const arModel = document.getElementById('arModel');
-                        arModel.setAttribute('scale', `${scaleValue} ${scaleValue} ${scaleValue}`);
-                    }
-                })
-                .catch(error => console.error('Ошибка:', error));
-        }
-        
-        // Запускаем AR
-        WEBARSDK.Init();
-    </script>
+    const creatureId = new URLSearchParams(window.location.search).get('id');
+    
+    if (creatureId) {
+        fetch('data/creatures.json')
+            .then(response => response.json())
+            .then(data => {
+                const creature = data.creatures.find(c => c.id === creatureId);
+                if (creature) {
+                    document.getElementById('model').setAttribute('src', `aframe/models/${creature.id}.glb`);
+                    document.title = `${creature.name} в AR | Omamori Guide`;
+                    
+                    // Берём scale из JSON
+                    const arModel = document.getElementById('arModel');
+                    const scaleVal = creature.scale;
+                    arModel.setAttribute('scale', `${scaleVal} ${scaleVal} ${scaleVal}`);
+                }
+            })
+            .catch(error => console.error('Ошибка:', error));
+    }
+    
+    WEBARSDK.Init();
+</script>
+
 </body>
 </html>
