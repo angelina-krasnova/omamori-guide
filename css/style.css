@@ -24,12 +24,6 @@
     justify-content: center;
 }
 
-.qrCodeContainer {
-    display: flex; 
-    justify-content: center; 
-    margin: 20px 0;
-}
-
 .qr-modal .btn {
     margin-top: 20px;
 }

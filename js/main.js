@@ -258,7 +258,7 @@ function showQRCodeForDesktop(creatureId) {
             modal.innerHTML = `
                 <div class="paper-texture">
                     <p>Отсканируйте QR-код, чтобы увидеть <strong>${creature.name}</strong> в AR</p>
-                    <div id="qrCodeContainer"></div>
+                    <div id="qrCodeContainer" style="display: flex; justify-content: center; margin: 20px 0;"></div>
                     <p style="color: var(--text-muted); font-size: 12px;">Android: Chrome | iOS: Safari</p>
                     <button class="btn btn-primary" onclick="this.closest('.qr-modal').remove()">Закрыть</button>
                 </div>
