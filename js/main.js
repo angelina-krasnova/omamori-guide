@@ -226,6 +226,9 @@ function displayCreature(creatures, creatureId) {
                     <h4>Тип</h4>
                     <p>${creature.characteristics.type}</p>
                 </div>
+                <a href="legends.html#legend-${creature.id}"  style="color: #B22222;">
+                Читать легенду о ${creature.name}
+            </a>
             </div>
         </div>
     `;
@@ -235,10 +238,10 @@ function displayCreature(creatures, creatureId) {
 window.openAR = function(creatureId) {
     const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
     if (isMobile) {
-        // На телефоне: открываем AR-страницу
+        // На телефоне открываем AR-страницу
         window.location.href = `ar.html?id=${creatureId}`;
     } else {
-        // На компьютере: показываем QR-код
+        // На компьютере показываем QR-код
         showQRCodeForDesktop(creatureId);
     }
 };

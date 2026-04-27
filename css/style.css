@@ -10,6 +10,12 @@
     --nav-bg: #0A0A0A;                 /* Очень темный для навигации */
 }
 
+@font-face {
+    font-family: 'Angry';
+    src: url('../fonts/angry.otf') format('opentype');}
+h1 {
+    font-family: 'Angry', 'Inter', serif;}
+
 /* QR модальное окно */
 .qr-modal {
     position: fixed;
@@ -195,7 +201,7 @@ main {
 }
 
 .hero-title {
-    font-size: clamp(2.2rem, 5vw, 4rem);
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
     font-weight: 500;
     margin-bottom: 20px;
     line-height: 1.3;
@@ -344,6 +350,10 @@ main {
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     gap: 30px;
     padding: 20px 0;
+}
+
+.catalog-grid .btn-secondary {
+        width: calc(100% - 20px);
 }
 
 .profile-grid {
@@ -999,60 +1009,4 @@ footer p {
 .page-title{
     margin-top: 20px;
     margin-bottom: 20px;
-}
-
-/* Модальное окно для просмотра изображений */
-.image-viewer-modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.95);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    cursor: pointer;
-    animation: fadeIn 0.3s ease;
-}
-
-.image-viewer-modal img {
-    max-width: 90%;
-    max-height: 90%;
-    object-fit: contain;
-    border-radius: 8px;
-    animation: zoomIn 0.3s ease;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes zoomIn {
-    from { transform: scale(0.9); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
-}
-
-/* Обновляем стиль для изображения существа */
-.creature-image-large {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    border-radius: 24px;
-    overflow: hidden;
-    position: relative;
-    border: 1px solid var(--border-color);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-}
-
-.creature-image-large img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.creature-image-large:hover img {
-    transform: scale(1.05);
 }
