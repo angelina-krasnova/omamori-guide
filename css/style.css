@@ -11,10 +11,10 @@
 }
 
 @font-face {
-    font-family: 'Angry';
+    font-family: 'angry';
     src: url('../fonts/angry.otf') format('opentype');}
 h1 {
-    font-family: 'Angry', 'Inter', serif;}
+    font-family: 'angry', 'Inter', serif;}
 
 /* QR модальное окно */
 .qr-modal {
