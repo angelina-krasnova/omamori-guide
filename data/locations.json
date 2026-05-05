@@ -1,0 +1,176 @@
+{
+  "locations": [
+    {
+      "id": "fushimi-inari",
+      "name": "Святилище Фусими Инари",
+      "lat": 34.9671,
+      "lng": 135.7727,
+      "description": "Главное святилище Инари — бога риса и процветания. Тысячи красных торий ведут к священной горе. Кицунэ — посланники Инари — встречаются здесь повсюду в виде каменных статуй.",
+      "relatedCreatureId": "kitsune",
+      "relatedLegendId": "legend-kitsune"
+    },
+    {
+      "id": "kuzunoha",
+      "name": "Храм Кузунохи",
+      "lat": 34.5534,
+      "lng": 135.5059,
+      "description": "Храм, связанный с легендой о лисе-жене. Считается, что здесь покоится дух Кицунэ, помогающей влюблённым.",
+      "relatedCreatureId": "kitsune",
+      "relatedLegendId": "legend-kitsune"
+    },
+    {
+      "id": "miyajima",
+      "name": "Остров Миядзима",
+      "lat": 34.2961,
+      "lng": 132.3196,
+      "description": "Святилище Ицукусима с плавающими воротами тории. Считается, что здесь обитают ками моря. Также это место связано с богом грома Райдзином.",
+      "relatedCreatureId": "raijin",
+      "relatedLegendId": "legend-raijin"
+    },
+    {
+      "id": "kurama",
+      "name": "Гора Курама",
+      "lat": 35.1116,
+      "lng": 135.7708,
+      "description": "Место, где юный Усивакамару встретил короля тэнгу Содзёбо и обучился воинскому искусству. Считается местом силы.",
+      "relatedCreatureId": "tengu",
+      "relatedLegendId": "legend-tengu"
+    },
+    {
+      "id": "hakone",
+      "name": "Озеро Аси в Хаконэ",
+      "lat": 35.2069,
+      "lng": 139.0019,
+      "description": "Считается, что в глубинах озера до сих пор находится подводный дворец Рюгу-дзё, а иногда из воды показывается принцесса Отохимэ.",
+      "relatedCreatureId": "otohime",
+      "relatedLegendId": "legend-otohime"
+    },
+    {
+      "id": "sekigahara",
+      "name": "Равнина Сэкигахара",
+      "lat": 35.3656,
+      "lng": 136.4678,
+      "description": "Место знаменитой битвы 1600 года. Легенды гласят, что здесь до сих пор бродят призраки павших воинов и иногда появляется Гасядокуро.",
+      "relatedCreatureId": "gashadokuro",
+      "relatedLegendId": "legend-gashadokuro"
+    },
+    {
+      "id": "shabondama",
+      "name": "Пещера Тануки на Сикоку",
+      "lat": 33.8416,
+      "lng": 134.0947,
+      "description": "По легендам, здесь обитает знаменитый тануки, превращавшийся в чайник и помогавший монахам.",
+      "relatedCreatureId": "tanuki",
+      "relatedLegendId": "legend-tanuki"
+    },
+    {
+      "id": "morinji",
+      "name": "Храм Морин-дзи (Гунма)",
+      "lat": 36.5607,
+      "lng": 139.1573,
+      "description": "Знаменитый храм, где стоит статуя тануки, который превращался в волшебный чайник.",
+      "relatedCreatureId": "tanuki",
+      "relatedLegendId": "legend-tanuki"
+    },
+    {
+      "id": "gotokuji",
+      "name": "Храм Готокудзи",
+      "lat": 35.6522,
+      "lng": 139.6122,
+      "description": "Храм в Токио, который считается родиной Манэки-нэко — приглашающего кота, приносящего удачу.",
+      "relatedCreatureId": "manekineko",
+      "relatedLegendId": "legend-manekineko"
+    },
+    {
+      "id": "nabejima",
+      "name": "Замок Набесима (Сага)",
+      "lat": 33.2635,
+      "lng": 130.3002,
+      "description": "Место, где согласно преданию, дух старой кошки превратился в нэкомату и бродил по замку.",
+      "relatedCreatureId": "nekomata",
+      "relatedLegendId": "legend-nekomata"
+    },
+    {
+      "id": "shinboku_place",
+      "name": "Священная роща Камияма (префектура Нара)",
+      "lat": 34.6851,
+      "lng": 135.8048,
+      "description": "Одна из старейших священных рощ, где почитают деревья ками. Место связано с легендой о духе старой сосны.",
+      "relatedCreatureId": "shinboku",
+      "relatedLegendId": "legend-shinboku"
+    },
+    {
+      "id": "shisa_okinawa",
+      "name": "Замок Сюри (Окинава)",
+      "lat": 26.217,
+      "lng": 127.719,
+      "description": "Королевский замок на Окинаве, где по легенде каменные львы (си-са) защитили остров от дракона. У ворот до сих пор можно увидеть статуи си-са.",
+      "relatedCreatureId": "shisa",
+      "relatedLegendId": "legend-shisa"
+    },
+    {
+      "id": "tsukumogami_place",
+      "name": "Храм Якуси-дзи (Нара)",
+      "lat": 34.6687,
+      "lng": 135.7844,
+      "description": "Древний храм, где хранится множество вековых артефактов. Легенды гласят, что в весеннюю ночь Каннин старые вещи здесь оживают.",
+      "relatedCreatureId": "tsukumogami",
+      "relatedLegendId": "legend-tsukumogami"
+    },
+    {
+      "id": "daruma_temple",
+      "name": "Храм Дарюма-дзи (Такасаки)",
+      "lat": 36.3224,
+      "lng": 139.0031,
+      "description": "Главный храм, связанный с куклой Дарума. Каждый год здесь проводят ритуал «сожжения старых дарума» и освящают новые.",
+      "relatedCreatureId": "daruma",
+      "relatedLegendId": "legend-daruma"
+    },
+
+    {
+      "id": "yurei_place",
+      "name": "Ёцуя (исторический район Токио)",
+      "lat": 35.6895,
+      "lng": 139.6917,
+      "description": "Место, где разворачивается знаменитая история о мстящем призраке Оивы. Считается местом силы, связанным с проклятиями и духами умерших.",
+      "relatedCreatureId": "yurei",
+      "relatedLegendId": "legend-yurei"
+    },
+    {
+      "id": "onigashima",
+      "name": "Остров Онигасима (префектура Кагава)",
+      "lat": 34.4135,
+      "lng": 134.1803,
+      "description": "Легендарный «Остров демонов». Считается, что здесь жили они и находилась их крепость. Вдохновило историю о Сютэн-додзи.",
+      "relatedCreatureId": "oni",
+      "relatedLegendId": "legend-oni"
+    },
+    {
+      "id": "yukionna_place",
+      "name": "Горы Итакура (префектура Ниигата)",
+      "lat": 37.0512,
+      "lng": 139.0862,
+      "description": "Одно из самых снежных мест Японии. Местные легенды часто рассказывают о встречах с Юки-онной в зимнюю пору.",
+      "relatedCreatureId": "yukionna",
+      "relatedLegendId": "legend-yukionna"
+    },
+    {
+      "id": "kappa-cucumber",
+      "name": "Река Кинокава (префектура Вакаяма)",
+      "lat": 34.2333,
+      "lng": 135.1667,
+      "description": "Одна из рек, где по легендам часто появлялись каппа. Связана с историей о том, как люди писали имена детей на огурцах, чтобы защитить их от водяных.",
+      "relatedCreatureId": null,
+      "relatedLegendId": "kappa-cucumber"
+    },
+    {
+      "id": "crane-wife",
+      "name": "Деревня в провинции Микава (совр. префектура Айти)",
+      "lat": 34.9667,
+      "lng": 137.1667,
+      "description": "Традиционное место действия народной сказки «Цуру но онгаэси» (Журавлиная благодарность). Считается, что именно в этих краях старик спас раненого журавля.",
+      "relatedCreatureId": null,
+      "relatedLegendId": "crane-wife"
+    }
+  ]
+}

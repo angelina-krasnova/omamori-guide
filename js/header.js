@@ -27,6 +27,7 @@ function generateHeader() {
                 <li><a href="index.html" ${currentPage === 'index.html' ? 'class="active"' : ''}>Главная</a></li>
                 <li><a href="catalog.html" ${currentPage === 'catalog.html' ? 'class="active"' : ''}>Существа</a></li>
                 <li><a href="legends.html" ${currentPage === 'legends.html' ? 'class="active"' : ''}>Сказания</a></li>
+                <li><a href="map.html" ${currentPage === 'map.html' ? 'class="active"' : ''}>Карта</a></li>
                 <li><a href="about.html" ${currentPage === 'about.html' ? 'class="active"' : ''}>О проекте</a></li>
             </ul>
         </div>
